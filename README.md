@@ -1,6 +1,6 @@
-# SimpleCQRS
+# Command Query Patter
 
-A simple CQRS architecture. This is NOT using event sourcing. It is simply separating the querying of the data source and adding/updating the data source.
+An implementation of the command query pattern in .Net MVC.
 
 In addition, this architecture implements the mediator pattern to assist in removing code from controllers, and putting it in the command and query handlers.
 
