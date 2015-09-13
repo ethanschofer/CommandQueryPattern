@@ -1,4 +1,4 @@
-# Command Query Patter
+# Command Query Pattern
 
 An implementation of the command query pattern in .Net MVC.
 
