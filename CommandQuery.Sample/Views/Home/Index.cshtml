@@ -1,0 +1,55 @@
+﻿@model CommandQuery.Sample.CQRS.QueryResult.Blog.BlogsQueryResult
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Simple CQRS</h1>
+    <p class="lead">
+        Simple CQRS is an example of a simple CQRS architecture in the form of a basic blogging engine. This implementation of CQRS relies on the Entity
+        Framework version 6, Autofac for dependency injection, and Automapper for mapping from domain models to views.
+    </p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Create a blog &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Create A Blog</h2>
+        <p>
+            Add a new blog.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Add a blog &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Latest Posts</h2>
+        <p>View the latest posts from all bogs here.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Latest posts &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Favorite Posts</h2>
+        <p>View your favorite posts</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Favorite posts &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <table>
+        <tr>
+            <th>Blog Name</th>
+            <th>Number of Posts</th>
+            <th>Last Updated</th>
+            <th>Created</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        { 
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.NumberOfPosts</td>
+                <td>@item.UpdatedDate</td>
+                <td>@item.CreatedDate</td>
+                <td>@Html.ActionLink("Edit Blog",MVC.Blog.ActionNames.EditBlog, MVC.Blog.Name)</td>
+            </tr>
+        }
+    </table>
+</div>
