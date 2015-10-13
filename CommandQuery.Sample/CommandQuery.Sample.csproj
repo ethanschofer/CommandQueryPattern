@@ -170,9 +170,9 @@
     <Compile Include="CommandQuery\CommandHandler\Blog\CreateBlogCommandHandler.cs" />
     <Compile Include="CommandQuery\CommandHandler\Blog\DeleteBlogCommandHandler.cs" />
     <Compile Include="CommandQuery\CommandHandler\Blog\UpdateBlogCommandHandler.cs" />
-    <Compile Include="CommandQuery\CommandHandler\Comment\CreateCommentCommandHandler.cs" />
-    <Compile Include="CommandQuery\CommandHandler\Comment\DeleteCommentCommandHandler.cs" />
-    <Compile Include="CommandQuery\CommandHandler\Comment\UpdateCommentCommandHandler.cs" />
+    <Compile Include="CommandQuery\QueryHandler\Comment\CreateCommentCommandHandler.cs" />
+    <Compile Include="CommandQuery\QueryHandler\Comment\DeleteCommentCommandHandler.cs" />
+    <Compile Include="CommandQuery\QueryHandler\Comment\UpdateCommentCommandHandler.cs" />
     <Compile Include="CommandQuery\CommandHandler\Post\CreatePostCommandHandler.cs" />
     <Compile Include="CommandQuery\CommandHandler\Post\DaletePostCommandHandler.cs" />
     <Compile Include="CommandQuery\CommandHandler\Post\UpdatePostCommandHandler.cs" />

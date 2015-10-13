@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CommandQuery.Sample.Tests.CQRS.QueryHandler.Blog
+namespace CommandQuery.Sample.Tests.CommandQuery.QueryHandler.Blog
 {
     [TestClass]
     public class BlogsQueryHandlerTests

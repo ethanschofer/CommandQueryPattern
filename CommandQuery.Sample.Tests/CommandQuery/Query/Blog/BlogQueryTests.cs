@@ -2,7 +2,7 @@
 using CommandQuery.Sample.CQRS.Query.Blog;
 using System;
 
-namespace CommandQuery.Sample.Tests.CQRS.Query.Blog
+namespace CommandQuery.Sample.Tests.CommandQuery.Query.Blog
 {
     [TestClass]
     public class BlogQueryTests

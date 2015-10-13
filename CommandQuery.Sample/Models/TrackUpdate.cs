@@ -10,7 +10,7 @@ namespace CommandQuery.Sample.Models
             CreatedDate = DateTime.UtcNow;
             CreatedBy = "Anonymous";
             UpdatedDate = DateTime.UtcNow;
-            CreatedBy = "Anonymous";
+            UpdatedBy = "Anonymous";
         }
 
         public DateTime CreatedDate { get; private set; }

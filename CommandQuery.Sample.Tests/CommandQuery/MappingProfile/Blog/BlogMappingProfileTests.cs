@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CommandQuery.Sample.CQRS.QueryResult.Blog;
-using CommandQuery.Sample.CQRS.QueryResult.Post;
 using CommandQuery.Sample.Models;
 using System.Linq;
 
-namespace CommandQuery.Sample.Tests.CQRS.MappingProfile.Blog
+
+namespace CommandQuery.Sample.Tests.CommandQuery.MappingProfile.Blog
 {
     [TestClass]
     public class BlogMappingProfileTests
@@ -27,6 +26,19 @@ namespace CommandQuery.Sample.Tests.CQRS.MappingProfile.Blog
                 .ForMember(dest => dest.NumberOfComments, opt => opt.MapFrom(src => src.Comments.Count()));
 
             Mapper.CreateMap<Models.Blog, BlogQueryResult>();
+
+            Mapper.AssertConfigurationIsValid();
+        }
+
+        [TestMethod]
+        public void CreateMap_CreateBlogToBlog_IsValid()
+        {
+            Mapper.CreateMap<CreateBlog, Models.Blog>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()))
+                .ForMember(dest => dest.UpdatedDate, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore());
 
             Mapper.AssertConfigurationIsValid();
         }
